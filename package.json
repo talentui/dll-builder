@@ -1,0 +1,29 @@
+{
+    "name": "@talentui/dll-builder",
+    "version": "1.0.0",
+    "description": "打包和构建dll的模版项目",
+    "main": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/talentui/dll-builder.git"
+    },
+    "scripts": {
+        "build": "webpack",
+        "build-prod": "NODE_ENV=production webpack",
+        "debug": "node --inspect --debug-brk node_modules/.bin/webpack",
+        "prepublish": "npm run clear-dist && npm run build && npm run build-prod",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "clear-dist": "rm -rf ./dist/*"
+    },
+    "author": {
+        "name": "lihe3",
+        "email": "lihe3@beisen.com"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "webpack": "^3.0.0",
+        "@talentui/dll-webpack-config": "^1.0.1"
+    },
+    "peerDependencies": {
+    }
+}
